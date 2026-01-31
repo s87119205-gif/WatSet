@@ -30,7 +30,7 @@ The dataset structure is analyzed in **Figure 1**, providing a dual-perspective 
 - **(b) Class Balance (Right):** Shows the global ratio between Water and Non-water (Background) pixels, highlighting the class imbalance typical in remote sensing tasks.
 
 <p align="center">
-  <img src="figs/Fig1_Combined_Stats_V2.png" width="95%" alt="Statistical Overview">
+  <img src="figures/Fig1_Combined_Stats_V2.png" width="95%" alt="Statistical Overview">
 </p>
 <p align="center">
   <em>Figure 1: (a) Nested donut chart showing pixel contribution (Outer) vs. scene count (Inner); (b) Global water vs. non-water pixel ratio.</em>
@@ -43,7 +43,7 @@ To evaluate generalization capability, the dataset includes scenes with varying 
 
 
 <p align="center">
-  <img src="figs/Fig2_Satellite_Distribution_Map.png" width="90%" alt="Geographical Distribution Map">
+  <img src="figures/Fig2_Satellite_Distribution_Map.png" width="90%" alt="Geographical Distribution Map">
 </p>
 <p align="center">
   <em>Figure 2: Global geographical distribution of the dataset scenes, color-coded by satellite sensor.</em>
@@ -56,7 +56,7 @@ Each sample consists of a multispectral optical image and a pixel-level binary g
 - **Ground Truth:** Binary masks where **White** indicates water and **Black** indicates background.
 
 <p align="center">
-  <img src="figs/Fig3_Samples.png" width="80%" alt="Visual Samples">
+  <img src="figures/Fig3_Samples.png" width="80%" alt="Visual Samples">
 </p>
 <p align="center">
   <em>Figure 3: Representative samples. Left: True Color RGB images; Right: Ground Truth water masks.</em>
