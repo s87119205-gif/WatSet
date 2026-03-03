@@ -1,9 +1,26 @@
+## Data directory structure
 ```
 Data/
 ├── dset/                
-│   ├── scene        
+│   ├── scene
+│   │   ├── scene_ori   ## original data
+│   │   │   ├──l5 
+│   │   │   ├──l7 
+│   │   │   ├──l8 
+│   │   │   ├──l9 
+│   │   │   ├──s2 
+│   │   ├── scene_nor  ## nomalized data      
+│   │   │   ├──l5 
+│   │   │   ├──l7 
+│   │   │   ├──l8 
+│   │   │   ├──l9 
+│   │   │   ├──s2 
 │   └── truth
-|   └── valset    ## validation set split from whole dataset    
+│   │   ├──truth_gpkg
+│   │   ├──truth_tif
+│   └── valset        ## validation set splitted from whole dataset    
+│       │── patch_512
+│       │── patch_1024
 ├── result
 
 ```
