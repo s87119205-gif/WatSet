@@ -1,5 +1,5 @@
 // author: xin luo
-// created: 2020.11.25
+// created: 2020.11.25, modify: 2026.2.14
 // des: check the selected landsat images
 
 ////////////////////////////////////////////////////////////////
@@ -9,7 +9,6 @@
 var l9_region_01 = ee.Geometry.Rectangle(17.29, 12.47, 17.75, 12.91)
 var l9_scene_01 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_183051_20220922').clip(l9_region_01)
 print('l9_scene_01',l9_scene_01)
-
 // scene 02
 var l9_region_02 = ee.Geometry.Rectangle(86.29, 54.27, 87.06, 54.68)
 var l9_scene_02 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_146022_20220903').clip(l9_region_02)
@@ -29,6 +28,7 @@ print('l9_scene_04',l9_scene_04)
 var l9_region_05 = ee.Geometry.Rectangle(86.87, 34.36, 87.46, 34.85)
 var l9_scene_05 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_141036_20240820').clip(l9_region_05)
 print('l9_scene_05',l9_scene_05)
+
 
 // scene 06
 var l9_region_06 = ee.Geometry.Rectangle(-36.93, -5.4, -36.4, -4.92)
@@ -80,7 +80,6 @@ var l9_region_15 = ee.Geometry.Rectangle(35.17, 30.98, 35.8, 31.5)
 var l9_scene_15 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_174038_20230809').clip(l9_region_15)
 print('l9_scene_15',l9_scene_15)
 
-
 // scene 16
 var l9_region_16 = ee.Geometry.Rectangle(-70, 81.1, -66.8, 81.6)
 var l9_scene_16 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_038248_20220813').clip(l9_region_16)
@@ -90,7 +89,6 @@ print('l9_scene_16',l9_scene_16)
 var l9_region_17 = ee.Geometry.Rectangle(-54.8, 81.8, -51.5, 82.2)
 var l9_scene_17 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_028248_20230826').clip(l9_region_17)
 print('l9_scene_17',l9_scene_17)
-
 
 // scene 18
 var l9_region_18 = ee.Geometry.Rectangle(82.36, 40.7, 83, 41.15)
@@ -159,6 +157,14 @@ print('l9_scene_30',l9_scene_30)
 
 
 
+
+
+
+
+
+
+
+
 // ----------- Landsat 8
 // scene 01
 var l8_region_01 = ee.Geometry.Rectangle(97.65, 34.66, 98.19, 35.08)
@@ -176,9 +182,9 @@ var l8_scene_03 = ee.Image('LANDSAT/LC08/C02/T1_L2/LC08_032028_20190819').clip(l
 print('l8_scene_03:',l8_scene_03)
 
 // scene 04
-var l8_region_04 = ee.Geometry.Rectangle(-62.32, -4.44, -61.87, -4.04)
-var l8_scene_04 = ee.Image('LANDSAT/LC08/C02/T1_L2/LC08_232063_20170806').clip(l8_region_04)
-print('l8_scene_04:',l8_scene_04)
+var l8_region_04 = ee.Geometry.Rectangle(-62.32, -4.44, -61.87, -4.04);
+var l8_scene_04 = ee.Image('LANDSAT/LC08/C02/T1_L2/LC08_232063_20170806').clip(l8_region_04);
+print('l8_scene_04:',l8_scene_04);
 
 // scene 05
 var l8_region_05 = ee.Geometry.Rectangle(-4.32, 15.14, -3.85, 15.52)
@@ -411,7 +417,7 @@ print('l7_scene_17', l7_scene_17)
 
 // scene 18
 var l7_region_18 = ee.Geometry.Rectangle(111.08, 62.69, 111.82, 62.99)
-var l7_scene_18 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_142030_20010305').clip(l7_region_18)
+var l7_scene_18 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_134016_20000817').clip(l7_region_18)
 print('l7_scene_18', l7_scene_18)
 
 // scene 19
@@ -442,10 +448,10 @@ var l7_scene_23 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_038032_20160625').clip(l
 print('l7_scene_23', l7_scene_23);
 
 
-// scene 24
-var l7_region_24 = ee.Geometry.Rectangle(14.24, 49.66, 14.42, 49.76);
-var l7_scene_24 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_191025_20000512').clip(l7_region_24);
-print('l7_scene_24', l7_scene_24);
+// // scene 24
+// var l7_region_24 = ee.Geometry.Rectangle(14.24, 49.66, 14.42, 49.76);
+// var l7_scene_24 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_191025_20000512').clip(l7_region_24);
+// print('l7_scene_24', l7_scene_24);
 
 
 // scene 25
@@ -454,7 +460,7 @@ var l7_scene_25 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_128040_20000417').clip(l
 print('l7_scene_25', l7_scene_25);
 
 // scene 26
-var l7_region_26 = ee.Geometry.Rectangle(105.6, 28.72, 105.99, 29.04);
+var l7_region_26 = ee.Geometry.Rectangle(13.80, -9.1, 14.14, -8.8);
 var l7_scene_26 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_182066_20020127').clip(l7_region_26);
 print('l7_scene_26', l7_scene_26);
 
@@ -479,6 +485,10 @@ print('l7_scene_29', l7_scene_29);
 var l7_region_30 = ee.Geometry.Rectangle(-71.51, 64.67, -72.33, 64.99);
 var l7_scene_30 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_020015_20020824').clip(l7_region_30);
 print('l7_scene_30', l7_scene_30);
+
+
+
+
 
 
 
@@ -555,12 +565,12 @@ var l5_scene_14 = ee.Image('LANDSAT/LT05/C02/T1_L2/LT05_200017_20060605').clip(l
 print('l5_scene_14', l5_scene_14);
 
 // scene 15
-var l5_region_15 = ee.Geometry.Rectangle(6.82, 60.92, 7.52, 61.23);
+var l5_region_15 = ee.Geometry.Rectangle(-94.30, 31.03, -93.94, 31.33);
 var l5_scene_15 = ee.Image('LANDSAT/LT05/C02/T1_L2/LT05_025038_19840529').clip(l5_region_15);
 print('l5_scene_15', l5_scene_15);
 
 // scene 16
-var l5_region_16 = ee.Geometry.Rectangle(6.82, 60.92, 7.52, 61.23);
+var l5_region_16 = ee.Geometry.Rectangle(149.48, 61.80, 150.21, 62.12);
 var l5_scene_16 = ee.Image('LANDSAT/LT05/C02/T1_L2/LT05_108017_20090727').clip(l5_region_16);
 print('l5_scene_16', l5_scene_16);
 
@@ -680,7 +690,7 @@ Map.addLayer(l9_scene_04_outline, {palette: '0000FF'}, 'l9_scene_04_outline');
 var l9_scene_05_outline = empty.paint({
     featureCollection: l9_region_05, color: 1, width: 3});
 Map.addLayer(l9_scene_05_outline, {palette: '0000FF'}, 'l9_scene_05_outline');
-Map.addLayer(l9_scene_05, {bands:['SR_B5','SR_B4','SR_B3'], max:3000, min:0}, 'l9 scene 05');
+// Map.addLayer(l9_scene_05, {bands:['SR_B5','SR_B4','SR_B3'], max:20000, min:0}, 'l9 scene 05');
 
 // scene 06
 var l9_scene_06_outline = empty.paint({
@@ -734,7 +744,7 @@ Map.addLayer(l9_scene_13_outline, {palette: '0000FF'}, 'l9_scene_13_outline');
 var l9_scene_14_outline = empty.paint({
     featureCollection: l9_region_14, color: 1, width: 3});
 Map.addLayer(l9_scene_14_outline, {palette: '0000FF'}, 'l9_scene_14_outline');
-Map.addLayer(l9_scene_14, {bands:['SR_B5','SR_B4','SR_B3'], max:3000, min:0}, 'l9 scene 14');
+// Map.addLayer(l9_scene_14, {bands:['SR_B5','SR_B4','SR_B3'], max:20000, min:0}, 'l9 scene 14');
 
 // scene 15
 var l9_scene_15_outline = empty.paint({
