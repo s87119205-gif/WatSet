@@ -1,6 +1,8 @@
-## author: xin luo
-## create: 2020.1.24
-## des: a simple U-Net model
+'''
+author: xin luo
+create: 2020.1.24
+des: a simple U-Net model
+'''
 
 import torch
 import torch.nn as nn
@@ -18,7 +20,7 @@ class unet(nn.Module):
         super(unet, self).__init__()
         self.num_bands = num_bands
         self.up = nn.Upsample(scale_factor=2, mode='nearest')
-        self.down_conv1 = conv3x3_bn_relu(num_bands, 16)
+        self.down_conv1 = conv3x3_bn_relu(self.num_bands, 16)
         self.down_conv2 = conv3x3_bn_relu(16, 32)
         self.down_conv3 = conv3x3_bn_relu(32, 64)
         self.down_conv4 = conv3x3_bn_relu(64, 128)
@@ -29,7 +31,7 @@ class unet(nn.Module):
                 nn.Conv2d(32, 1, kernel_size=3, padding=1),
                 nn.Sigmoid()) 
 
-    def forward(self, x):  ## input size: 6x256x256
+    def forward(self, x):   ## input size: 6x256x256
         ## encoder part
         x1 = self.down_conv1(x)              
         x1 = F.avg_pool2d(input=x1, kernel_size=2)  # 16x128x128
@@ -47,5 +49,11 @@ class unet(nn.Module):
         x2_up = torch.cat([self.up(x2_up), x1], dim=1)  # (48+16)x128x128
         x1_up = self.up_conv3(x2_up)    # 32x128x128
         x1_up = self.up(x1_up)        # 32x256x256
-        logits = self.outp(x1_up)
-        return logits          
+        prob = self.outp(x1_up)
+        return prob          
+
+if __name__ == '__main__':
+    model = unet(num_bands=7)
+    input = torch.randn(1, 7, 256, 256)
+    output = model(input)
+    print(output.shape)
