@@ -448,10 +448,10 @@ var l7_scene_23 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_038032_20160625').clip(l
 print('l7_scene_23', l7_scene_23);
 
 
-// // scene 24
-// var l7_region_24 = ee.Geometry.Rectangle(14.24, 49.66, 14.42, 49.76);
-// var l7_scene_24 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_191025_20000512').clip(l7_region_24);
-// print('l7_scene_24', l7_scene_24);
+// scene 24
+var l7_region_24 = ee.Geometry.Rectangle(8.2, 46.88, 8.7, 47.21);
+var l7_scene_24 = ee.Image('LANDSAT/LE07/C02/T1_L2/LE07_194027_20000602').clip(l7_region_24);
+print('l7_scene_24', l7_scene_24);
 
 
 // scene 25
