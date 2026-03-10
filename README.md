@@ -12,7 +12,7 @@ This dataset focuses on multispectral water body segmentation, integrating optic
 ### 1. Data Diversity & Distribution
 To evaluate generalization capability, the dataset includes scenes with varying water body sizes and geographical locations.
 
-- **Geographical Distribution (Fig 2):** Samples are collected globally across **Asia, Europe, North America, South America, Africa, and Oceania**, ensuring no spatial bias towards a specific region.
+- **Geographical Distribution (Fig 1):** Samples are collected globally across **Asia, Europe, North America, South America, Africa, and Oceania**, ensuring no spatial bias towards a specific region.
 
 
 <p align="center">
@@ -21,12 +21,11 @@ To evaluate generalization capability, the dataset includes scenes with varying 
 <p align="center">
   <em>Figure 1: Global geographical distribution of the dataset scenes, color-coded by satellite sensor.</em>
 </p>
+<br>
 
-
-Each sample consists of a multispectral optical image and a pixel-level binary ground truth mask. 
-
-- **Preprocessing:** Images are visualized in **True Color (RGB)** using sensor-specific band combinations and robust 2%-98% percentile stretching.
-- **Ground Truth:** Binary masks where **White** indicates water and **Black** indicates background.
+Each sample consists of a multispectral optical image and a pixel-level binary ground truth mask **(Fig 2)**. 
+- **Scene:** Images are visualized in **True Color (RGB)** using sensor-specific band combinations and robust 2%-98% percentile stretching.
+- **Ground Truth:** Binary masks where **White** indicates background and **Blue** indicates water.
 
 <p align="center">
   <img src="figs/Fig2_Samples.png" width="80%" alt="Visual Samples">
