@@ -16,7 +16,7 @@ To evaluate generalization capability, the dataset includes scenes with varying 
 
 
 <p align="center">
-  <img src="figs/Fig1_Satellite_Distribution_Map.png" width="90%" alt="Geographical Distribution Map">
+  <img src="figs/dset_distribution.png" width="90%" alt="Geographical Distribution Map">
 </p>
 <p align="center">
   <em>Figure 1: Global geographical distribution of the dataset scenes, color-coded by satellite sensor.</em>
@@ -28,8 +28,12 @@ Each sample consists of a multispectral optical image and a pixel-level binary g
 - **Ground Truth:** Binary masks where **White** indicates background and **Blue** indicates water.
 
 <p align="center">
-  <img src="figs/Fig2_Samples.png" width="80%" alt="Visual Samples">
+  <img src="figs/dset_sam_0.png" width="80%" alt="Visual Samples">
 </p>
+<p align="center">
+  <img src="figs/dset_sam_1.png" width="80%" alt="Visual Samples">
+</p>
+
 <p align="center">
   <em>Figure 2: Representative samples. Left: True Color RGB images; Right: Ground Truth water masks.</em>
 </p>
@@ -44,7 +48,7 @@ The dataset structure is analyzed in **Figure 3**, providing a dual-perspective 
 - **(b) Class Balance (Right):** Shows the global ratio between Water and Non-water (Background) pixels, highlighting the class imbalance typical in remote sensing tasks.
 
 <p align="center"> 
-  <img src="figs/Fig3_Dataset_Stats.png" width="95%" alt="Statistical Overview">
+  <img src="figs/dset_stats.png" width="95%" alt="Statistical Overview">
 </p>
 <p align="center">
   <em>Figure 3: (a) Nested donut chart showing pixel contribution (Outer) vs. scene count (Inner); (b) Global water vs. non-water pixel ratio.</em>
@@ -53,7 +57,7 @@ The dataset structure is analyzed in **Figure 3**, providing a dual-perspective 
 ### 3. Dataset Generation Workflow
 As illustrated in **Figure 4**, the dataset was constructed through a streamlined three-step pipeline to ensure high quality and accuracy.
 <p align="center"> 
-  <img src="figs/Fig4_Dataset_Generation_Workflow.png" width="95%" alt="Dataset Workflow">
+  <img src="figs/dset_generation_workflow.png" width="95%" alt="Dataset Workflow">
 </p>
 <p align="center">
   <em>Figure 4: The overall workflow of the proposed remote sensing waterbody dataset construction.</em>
